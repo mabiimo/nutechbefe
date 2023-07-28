@@ -1,0 +1,124 @@
+
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name":"coba3",
+    "email":"cob2@gmail.com",
+    "password":"123456",
+    "confPassword":"123456",
+    "role":"user"
+}
+
+###
+//Create User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"cobacoba",
+    "email":"coba@gmail.com",
+    "password":"123456",
+    "confPassword":"123456",
+    "role":"user"
+}
+
+###
+//Get all User 
+GET  http://localhost:5000/users
+
+###
+//Get Single User
+GET  http://localhost:5000/users/3e7df32b-575e-47fc-a911-c1fae6abe7b6
+
+###
+//update
+PATCH http://localhost:5000/users/3e7df32b-575e-47fc-a911-c1fae6abe7b6
+Content-Type: application/json
+
+{
+    "name":"BimoUsers",
+    "email":"bimo@gmail.com",
+    "password":"123456",
+    "confPassword":"123456",
+    "role":"user"
+}
+###
+//update
+DELETE  http://localhost:5000/users/e192110b-0acb-4afc-89ff-dc2bc0ba41bb
+
+
+###
+//Login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"123456"
+}
+
+###
+//Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"bimo@gmail.com",
+    "password":"123456"
+}
+
+###
+//Cek Login
+get http://localhost:5000/me
+
+###
+//Logout
+delete http://localhost:5000/logout
+Content-Type: application/json
+
+
+###
+//Get All Product 
+GET http://localhost:5000/product
+
+###
+GET http://localhost:5000/product/779ee962-993d-41ca-846b-52dd958d2521
+
+
+
+###
+//Create product
+POST http://localhost:5000/product
+Content-Type: application/json
+
+{
+    "name":"Product 210",
+    "buyPrice":100000,
+    "sellPrice":200000,
+    "stock":200,
+    "imageUrl":"aaa"
+}
+
+###
+//Get single product
+GET http://localhost:5000/product
+
+###
+//update product
+PATCH  http://localhost:5000/product/779ee962-993d-41ca-846b-52dd958d2521
+Content-Type: application/json
+
+{
+    "name":"Product Yang sedang di update user",
+    "buyPrice":100000,
+    "sellPrice":200000,
+    "stock":200,
+    "imageUrl":"aaa"
+}
+
+###
+//deleted product
+delete http://localhost:5000/product/b68f75cf-93e7-42f3-a4ff-2fb28bc11055
+
